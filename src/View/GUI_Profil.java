@@ -32,12 +32,14 @@ public class GUI_Profil extends javax.swing.JFrame {
         jLabel1.setText("MY PROFILE");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, -190, -1, 450));
 
+        jTextArea1.setBackground(new java.awt.Color(255, 245, 238));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 380, 270));
 
+        btnBack.setBackground(new java.awt.Color(255, 245, 238));
         btnBack.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {

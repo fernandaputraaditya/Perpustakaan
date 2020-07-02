@@ -81,6 +81,7 @@ public class GUI_DataBuku extends javax.swing.JFrame {
         jLabel5.setText("Tahun Terbit");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 255, -1, -1));
 
+        tfIdBuku.setBackground(new java.awt.Color(255, 245, 238));
         tfIdBuku.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tfIdBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,15 +90,19 @@ public class GUI_DataBuku extends javax.swing.JFrame {
         });
         getContentPane().add(tfIdBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 113, 230, -1));
 
+        tfJudul.setBackground(new java.awt.Color(255, 245, 238));
         tfJudul.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(tfJudul, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 157, 230, -1));
 
+        tfPengarang.setBackground(new java.awt.Color(255, 245, 238));
         tfPengarang.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(tfPengarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 203, 230, -1));
 
+        tfTahun.setBackground(new java.awt.Color(255, 245, 238));
         tfTahun.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(tfTahun, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 252, 230, -1));
 
+        btnAdd.setBackground(new java.awt.Color(255, 245, 238));
         btnAdd.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +112,7 @@ public class GUI_DataBuku extends javax.swing.JFrame {
         });
         getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 156, 80, -1));
 
+        btnEdit.setBackground(new java.awt.Color(255, 245, 238));
         btnEdit.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         btnEdit.setText("Update");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +122,7 @@ public class GUI_DataBuku extends javax.swing.JFrame {
         });
         getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 202, 80, -1));
 
+        btnDelete.setBackground(new java.awt.Color(255, 245, 238));
         btnDelete.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +132,7 @@ public class GUI_DataBuku extends javax.swing.JFrame {
         });
         getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 156, 73, -1));
 
+        btnClear.setBackground(new java.awt.Color(255, 245, 238));
         btnClear.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +163,7 @@ public class GUI_DataBuku extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 314, 700, 268));
 
+        btnBack.setBackground(new java.awt.Color(255, 245, 238));
         btnBack.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {

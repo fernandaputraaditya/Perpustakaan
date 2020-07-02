@@ -6,7 +6,10 @@ import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import Model.Member;
+import View.GUI_PinjamBuku;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Controller_Member {
 
@@ -106,7 +109,7 @@ public class Controller_Member {
 
     public ArrayList<Member> getDataMember() throws SQLException {
         this.arrMember.clear();
-        ResultSet rs = this.koneksi.GetData("SELECT * FROM MEMBER_07015");
+        ResultSet rs = this.koneksi.GetData("SELECT * FROM MEMBER_07015 ORDER BY ID_MEMBER ASC");
         while (rs.next()) {
             Member member = new Member();
             member.setId_Member(rs.getInt("ID_MEMBER"));
@@ -158,5 +161,39 @@ public class Controller_Member {
         }
         return member;
     }
-
+    
+//    public void login(int id, String pass) throws SQLException
+//    {
+//        try {
+//        ResultSet rs = this.koneksi.GetData("SELECT * FROM MEMBER_07015"
+//                + " WHERE ID_MEMBER = '" + id + "' AND PASSWORD = '" + pass + "'");
+//
+//        int baris = 0;
+//     
+//            while (rs.next()) {
+//                baris = rs.getRow();
+//           
+//            if (baris ==1) {
+//                Member mem = new Member();
+//                mem.setId_Member(rs.getInt("ID_MEMBER"));
+//                mem.setNama(rs.getString("NAMA"));
+//                mem.setAlamat(rs.getString("ALAMAT"));
+//                mem.setJenis_Kelamin(rs.getString("JENIS_KELAMIN"));
+//                mem.setTanggal_Lahir(rs.getDate("TANGGAL_LAHIR"));
+//                mem.setNo_Telp(rs.getString("NO_TELP"));
+//                mem.setNIK(rs.getInt("NIK"));
+//                mem.setEmail(rs.getString("EMAIL"));
+//                mem.setPassword(rs.getString("PASSWORD"));
+//
+//                new GUI_PinjamBuku(mem.getNama()).setVisible(true);
+//                
+//            }else {
+//                
+//            }
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Controller_Member.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+//
 }

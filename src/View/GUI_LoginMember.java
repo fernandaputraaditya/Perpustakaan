@@ -150,10 +150,10 @@ public class GUI_LoginMember extends javax.swing.JFrame {
 
                 try {
                     new GUI_PinjamBuku().setVisible(true);
-                    this.dispose();
                 } catch (SQLException ex) {
                     Logger.getLogger(GUI_LoginMember.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                this.dispose();
                 
             } else {
                 JOptionPane.showMessageDialog(null, "Password Anda Salah");

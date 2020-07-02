@@ -14,6 +14,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.WARNING_MESSAGE;
@@ -39,8 +40,9 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         this.controller_buku = new Controller_Buku();
         this.controller_admin = new Controller_Admin();
         this.controller_member = new Controller_Member();
-        this.showComboBoxAdmin();
+        //this.tfMember.setText(i);
         this.showComboBoxMember();
+        this.showComboBoxAdmin();
         this.showComboBoxBuku();
         this.showTablePeminjaman();
 
@@ -61,7 +63,6 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         cbId_Admin = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        cbIdMember = new javax.swing.JComboBox<>();
         btnAdd = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
@@ -74,6 +75,7 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         cbIdBuku = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         tfTglPinjam = new javax.swing.JTextField();
+        cbMember = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,26 +83,24 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel1.setText("PEMINJAMAN BUKU");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 53, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 37, -1, 50));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Nama Admin");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(738, 109, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 120, -1, 20));
 
         cbId_Admin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(cbId_Admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(839, 107, 150, -1));
+        getContentPane().add(cbId_Admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 120, 150, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Member");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 148, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 153, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Buku");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 184, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 193, -1, -1));
 
-        cbIdMember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(cbIdMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 146, 210, -1));
-
+        btnAdd.setBackground(new java.awt.Color(220, 220, 220));
         btnAdd.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         btnAdd.setText("Tambah");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -108,8 +108,9 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
                 btnAddActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 180, -1, -1));
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 189, -1, -1));
 
+        btnBack.setBackground(new java.awt.Color(220, 220, 220));
         btnBack.setFont(new java.awt.Font("Tw Cen MT", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -117,12 +118,13 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 568, 69, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(946, 577, 69, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Tabel Data Peminjam");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 283, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 324, -1, -1));
 
+        tblPeminjam.setBackground(new java.awt.Color(245, 245, 245));
         tblPeminjam.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -136,12 +138,13 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblPeminjam);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 324, 319, 226));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 359, 319, 200));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Tabel Data Buku");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 146, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 151, -1, -1));
 
+        btnSave.setBackground(new java.awt.Color(220, 220, 220));
         btnSave.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -149,8 +152,9 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 568, -1, -1));
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 577, -1, -1));
 
+        tblBuku.setBackground(new java.awt.Color(245, 245, 245));
         tblBuku.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -164,7 +168,7 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblBuku);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 180, 500, 370));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 189, 500, 370));
 
         cbIdBuku.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbIdBuku.addActionListener(new java.awt.event.ActionListener() {
@@ -172,15 +176,18 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
                 cbIdBukuActionPerformed(evt);
             }
         });
-        getContentPane().add(cbIdBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 182, 210, -1));
+        getContentPane().add(cbIdBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 191, 210, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Tgl Pinjam");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 224, -1, -1));
-        getContentPane().add(tfTglPinjam, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 222, 210, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 234, -1, -1));
+        getContentPane().add(tfTglPinjam, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 232, 210, -1));
+
+        cbMember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(cbMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 151, 210, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/books-1845614_1280.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 630));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -3, 1030, 660));
 
         pack();
         setLocationRelativeTo(null);
@@ -216,7 +223,7 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         for (Member m : this.controller_member.getDataMember()) {
             dcbmMember.addElement(m.getNama());
         }
-        this.cbIdMember.setModel(dcbmMember);
+        this.cbMember.setModel(dcbmMember);
     }
 
     public void showComboBoxBuku() throws SQLException {
@@ -256,7 +263,7 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
             try {
 
                 dp.setBuku(this.controller_buku.getDataBuku().get(this.cbIdBuku.getSelectedIndex()));
-               
+
                 this.arrKeranjang.add(dp);
                 this.showTablePeminjaman();
                 JOptionPane.showMessageDialog(null, "Sukses");
@@ -272,7 +279,7 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
         Peminjaman peminjaman = new Peminjaman();
         try {
             peminjaman.setAdmin(this.controller_admin.getDataAdmin().get(this.cbId_Admin.getSelectedIndex()));
-            peminjaman.setMember(this.controller_member.getDataMember().get(this.cbIdMember.getSelectedIndex()));
+            peminjaman.setMember(this.controller_member.getDataMember().get(this.cbMember.getSelectedIndex()));
             peminjaman.setBuku(this.controller_buku.getDataBuku().get(this.cbIdBuku.getSelectedIndex()));
             peminjaman.setTanggal_Pinjam(new SimpleDateFormat("dd/MM/yyyy").parse(this.tfTglPinjam.getText()));
             peminjaman.setArrDetail_Peminjaman(this.arrKeranjang);
@@ -324,7 +331,7 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
                 try {
                     new GUI_PinjamBuku().setVisible(true);
                 } catch (SQLException ex) {
-                    java.util.logging.Logger.getLogger(GUI_PinjamBuku.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(GUI_PinjamBuku.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
@@ -335,8 +342,8 @@ public class GUI_PinjamBuku extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<String> cbIdBuku;
-    private javax.swing.JComboBox<String> cbIdMember;
     private javax.swing.JComboBox<String> cbId_Admin;
+    private javax.swing.JComboBox<String> cbMember;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

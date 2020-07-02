@@ -138,6 +138,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfId">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="93" width="230" height="-1"/>
@@ -145,6 +150,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfNama">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNamaActionPerformed"/>
       </Events>
@@ -155,6 +165,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfJenisKelamin">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="284" width="230" height="-1"/>
@@ -162,6 +177,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfTglLahir">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="322" width="230" height="-1"/>
@@ -169,6 +189,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfNoTelp">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="360" width="230" height="-1"/>
@@ -189,6 +214,9 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="taAlamat">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ee" green="f5" red="ff" type="rgb"/>
+            </Property>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
@@ -239,7 +267,7 @@
           <Color blue="ee" green="f5" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Trebuchet MS" size="14" style="1"/>
+          <Font name="Tw Cen MT" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
@@ -320,6 +348,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfNik">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="398" width="230" height="-1"/>
@@ -343,6 +376,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfEmail">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="436" width="230" height="-1"/>
@@ -366,6 +404,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tfPass">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="f5" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="124" y="474" width="230" height="-1"/>

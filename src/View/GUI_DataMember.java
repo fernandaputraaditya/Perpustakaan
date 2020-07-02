@@ -102,18 +102,28 @@ public class GUI_DataMember extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("No Telp");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 362, -1, -1));
+
+        tfId.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfId, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 93, 230, -1));
 
+        tfNama.setBackground(new java.awt.Color(255, 245, 238));
         tfNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNamaActionPerformed(evt);
             }
         });
         getContentPane().add(tfNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 131, 230, -1));
+
+        tfJenisKelamin.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfJenisKelamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 284, 230, -1));
+
+        tfTglLahir.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfTglLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 322, 230, -1));
+
+        tfNoTelp.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfNoTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 360, 230, -1));
 
+        taAlamat.setBackground(new java.awt.Color(255, 245, 238));
         taAlamat.setColumns(20);
         taAlamat.setRows(5);
         jScrollPane1.setViewportView(taAlamat);
@@ -141,7 +151,7 @@ public class GUI_DataMember extends javax.swing.JFrame {
         getContentPane().add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, -1, -1));
 
         btnDelete.setBackground(new java.awt.Color(255, 245, 238));
-        btnDelete.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnDelete.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,18 +195,24 @@ public class GUI_DataMember extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("NIK");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
+
+        tfNik.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfNik, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 398, 230, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Email");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 438, -1, -1));
+
+        tfEmail.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 436, 230, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Password");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 476, -1, -1));
+
+        tfPass.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 474, 230, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/janko-ferlic-sfL_QOnmy00-unsplash.jpg"))); // NOI18N

@@ -58,6 +58,7 @@ public class GUI_DataPeminjaman extends javax.swing.JFrame {
         jLabel1.setText("DATA PEMINJAMAN");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, -1, -1));
 
+        tfSearch.setBackground(new java.awt.Color(255, 245, 238));
         tfSearch.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(tfSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, 230, 22));
 

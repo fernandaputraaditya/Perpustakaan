@@ -1,10 +1,6 @@
 package View;
 
 import Controller.Controller_Member;
-import java.sql.SQLException;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.OK_CANCEL_OPTION;
@@ -112,11 +108,20 @@ public class GUI_RegisMember extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Password");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 484, -1, -1));
+
+        tfId.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfId, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 85, 230, -1));
+
+        tfNama.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 123, 230, -1));
+
+        tfTglLahir.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfTglLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 334, 230, -1));
+
+        tfNoTelp.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfNoTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 368, 230, -1));
 
+        tfNik.setBackground(new java.awt.Color(255, 245, 238));
         tfNik.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNikActionPerformed(evt);
@@ -124,20 +129,25 @@ public class GUI_RegisMember extends javax.swing.JFrame {
         });
         getContentPane().add(tfNik, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 406, 230, -1));
 
+        tfPass.setBackground(new java.awt.Color(255, 245, 238));
         tfPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfPassActionPerformed(evt);
             }
         });
         getContentPane().add(tfPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 482, 230, -1));
+
+        tfEmail.setBackground(new java.awt.Color(255, 245, 238));
         getContentPane().add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 444, 230, -1));
 
+        taAlamat.setBackground(new java.awt.Color(255, 245, 238));
         taAlamat.setColumns(20);
         taAlamat.setRows(5);
         jScrollPane1.setViewportView(taAlamat);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 163, 230, 105));
 
+        cbJenisKelamin.setBackground(new java.awt.Color(255, 245, 238));
         cbJenisKelamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbJenisKelamin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +156,7 @@ public class GUI_RegisMember extends javax.swing.JFrame {
         });
         getContentPane().add(cbJenisKelamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 296, 230, -1));
 
+        btnBack.setBackground(new java.awt.Color(255, 245, 238));
         btnBack.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +166,7 @@ public class GUI_RegisMember extends javax.swing.JFrame {
         });
         getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 563, -1, -1));
 
+        btnExit.setBackground(new java.awt.Color(255, 245, 238));
         btnExit.setFont(new java.awt.Font("Tw Cen MT", 1, 12)); // NOI18N
         btnExit.setText("Exit");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
@@ -164,6 +176,7 @@ public class GUI_RegisMember extends javax.swing.JFrame {
         });
         getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 563, -1, -1));
 
+        btnRegistrasi.setBackground(new java.awt.Color(255, 245, 238));
         btnRegistrasi.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         btnRegistrasi.setText("Registrasi");
         btnRegistrasi.addActionListener(new java.awt.event.ActionListener() {
@@ -173,8 +186,8 @@ public class GUI_RegisMember extends javax.swing.JFrame {
         });
         getContentPane().add(btnRegistrasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 529, -1, 28));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Basis Data\\Project TA\\src\\Images\\janko-ferlic-sfL_QOnmy00-unsplash.jpg")); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 710, 620));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/janko-ferlic-sfL_QOnmy00-unsplash.jpg"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 710, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -210,8 +223,8 @@ public class GUI_RegisMember extends javax.swing.JFrame {
     public void showComboBoxJenis() {
         DefaultComboBoxModel dcbmJenis = new DefaultComboBoxModel();
         
-        dcbmJenis.addElement("--Pilih--");
-        dcbmJenis.addElement("Pria");
+        dcbmJenis.addElement("-- Pilih --");
+        dcbmJenis.addElement("Laki-Laki");
         dcbmJenis.addElement("Perempuan");
         this.cbJenisKelamin.setModel(dcbmJenis);
     }
